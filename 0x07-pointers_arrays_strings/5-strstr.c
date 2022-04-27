@@ -23,7 +23,6 @@ return (i - b);
  * @needle: substring to find
  * Return: pointer to string with result of search
  */
-
 char *_strstr(char *haystack, char *needle)
 {
 unsigned int len;
