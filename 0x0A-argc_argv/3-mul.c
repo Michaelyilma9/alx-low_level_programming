@@ -3,7 +3,7 @@
 
 /**
  * main - prints its name, followed by new
- * @argv: argument counter
+ * @argc: argument counter
  * @argv: argument vector
  * Return: 0, if error return 1.
  */
