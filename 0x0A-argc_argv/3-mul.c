@@ -2,24 +2,27 @@
 #include <stdlib.h>
 
 /**
- * main - multiplies two numbers
- * @argc: n args
- * @argv: arr args
- * Return: 0
+ * main - prints its name, followed by new
+ * @argv: argument counter
+ * @argv: argument vector
+ * Return: 0, if error return 1.
  */
 int main(int argc, char *argv[])
 {
-int i, val = 1;
+int i, mul = 1;
 
-if (argc != 3)
+if (argc > 1 && (argc - 1) == 2)
 {
-printf("Error\n");
-return (1);								
-}
 for (i = 1; i < argc; i++)
 {
-val *= atoi(argv[i]);
+mul *= atoi(argv[i]);
+}
+printf("%d\n", mul);
+}
+else
 {
-printf("%d\n", val);
+printf("Error\n");
+return (1);
+}
 return (0);
 }
