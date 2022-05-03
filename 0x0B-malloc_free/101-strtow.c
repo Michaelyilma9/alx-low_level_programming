@@ -10,7 +10,7 @@
 
 int wordcount(char *str)
 {
-int words = 0
+int words = 0;
 
 while (*str != '\0')
 {
@@ -74,6 +74,8 @@ return (NULL);
 
 for (i = s = 0; i < str_l; i++)
 {
+for (word = s; str[word] != '\0'; word++)
+{
 if (str[word] == ' ')
 s++;
 
@@ -82,7 +84,7 @@ if (str[word] != ' ' && (str[word + 1] == ' ' || str[word + 1] == '\0'))
 string[i] = malloc((word - s + 2) * sizeof(char));
 if (string[i] == NULL)
 {
-free_aray(string, i);
+free_array(string, i);
 return (NULL);
 }
 break;
