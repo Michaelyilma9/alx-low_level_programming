@@ -1,45 +1,51 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
+#include <stdlib.h>
 /**
- * argstostr - concatenates all arguements of a program
- *
- * @ac:argument count
- * @av:argument vector
- *
- * Return: pointer to a new string
+ * *argstostr - concatenates all the argumnets of program
+ * @ac: argument counter
+ * @av: argumnet vector
+ * Return: NULL if ac == 0 or av == NULL else
+ * pointer to a string of NULL if it fails
  */
 char *argstostr(int ac, char **av)
 {
-int i = 0, j = 0, z = 0, length = 0;
+int i, j, k, length;
+char *str;
 
-char *p;
-
+length = 0;
+k = 0;
 if (ac == 0 || av == NULL)
-{
 return (NULL);
-}
-for (i = 0; av[i][j]; j++)
+
+i = 0;
+while (i < ac)
+{
+j = 0;
+while (av[i][i])
 {
 length++;
+j++;
 }
-length += 1;
+length++;
+i++;
 }
-p = malloc((sizeof(char) * length) + 1);
-if (p == NULL)
-{
+str = malloc((sizeof(char) + length) + 1);
+if (str == NULL)
 return (NULL);
-}
-for (i = 0; i < ac; i++)
+i = 0;
+while (i < ac)
 {
-for (j = 0; av[i][j]; j++)
+j = 0;
+while (av[i][j])
 {
-p[z] = ac[i][j];
-z++;
+str[k] = av[i][j];
+j++;
+k++;
 }
-p[z] = '\n';
-z++;
+str[k] = '\n';
+k++;
+i++;
 }
-p[z] = '\0';
-return (p);
+str[k] = '\0';
+return (str);
 }
