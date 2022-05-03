@@ -1,51 +1,45 @@
-#include "holberton.h"
 #include <stdlib.h>
+
 /**
- * *argstostr - concatenates all the arguments of program
+ * argstostr - a function that concatenates all the arguments
+ *
  * @ac: argument counter
- * @av: argument vector
- * Return: NULL if ac == 0 or av == NULL else
- * pointer to a string of NULL if it fails
+ * @av: argument holder
+ *
+ * Return: a pointer to a new string or NULL if it fails
  */
+
 char *argstostr(int ac, char **av)
 {
 int i, j, k, length;
 char *str;
 
-length = 0;
-k = 0;
 if (ac == 0 || av == NULL)
 return (NULL);
 
-i = 0;
-while (i < ac)
+/*find length of vector + '\0' which makes it a 2d array*/
+length = 0
+for (i = 0; i < ac; i++)
 {
-j = 0;
-while (av[i][j])
-{
+for (j = 0; av[i][j] != '\0'; j++)
 length++;
-j++;
-}
 length++;
-i++;
 }
-str = malloc((sizeof(char) + length) + 1);
+
+str = malloc((length + 1) * sizeof(char));
 if (str == NULL)
 return (NULL);
-i = 0;
-while (i < ac)
+
+k = 0;
+for (i = 0; i < ac; i++)
 {
-j = 0;
-while (av[i][j])
-{
-str[k] = av[i][j];
-j++;
+for (j = 0; av[i][j];
 k++;
 }
 str[k] = '\n';
 k++;
-i++;
 }
 str[k] = '\0';
+
 return (str);
 }
