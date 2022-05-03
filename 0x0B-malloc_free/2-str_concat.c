@@ -5,9 +5,9 @@
 /**
  * *str_concat - concatenates two strings
  *
- * @s1; first string
- * @s2; second string
- * Return: always 0
+ * @s1: first string
+ * @s2: second string
+ * Return: Always 0
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -22,11 +22,19 @@ n = string_length(s1) + string_length(s2) + 1;
 new_str = malloc(sizeof(char) * n);
 /* check if null is passed */
 if (new_str == NULL)
-return (null);
+return (NULL);
 /* insert s1 into the new string */
 while (s1[i] != '\0')
 {
 new_str[j] = s1[i];
+i++;
+j++;
+}
+/* insert s2 into the new string */
+i = 0
+while (s2[i] != '\0')
+{
+new_str[j] = s2[i];
 i++;
 j++;
 }
