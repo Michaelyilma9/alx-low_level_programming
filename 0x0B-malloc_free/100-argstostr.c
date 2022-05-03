@@ -21,7 +21,7 @@ i = 0;
 while (i < ac)
 {
 j = 0;
-while (av[i][i])
+while (av[i][j])
 {
 length++;
 j++;
