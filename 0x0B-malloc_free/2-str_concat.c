@@ -33,7 +33,12 @@ char *conc, *tmp;
 if (!s1)
 s1 = "";
 else
-11 = _strlen(s2);
+11 = _strlen(s1);
+
+if (!s2)
+s2 = "";
+else
+12 = _strlen(s2);
 
 conc = malloc(11 + 12 + 1);
 if (!conc)
