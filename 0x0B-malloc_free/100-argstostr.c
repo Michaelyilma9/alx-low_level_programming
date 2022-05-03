@@ -3,7 +3,7 @@
 /**
  * *argstostr - concatenates all the arguments of program
  * @ac: argument counter
- * @av; argument vector
+ * @av: argument vector
  * Return: NULL if ac == 0 or av == NULL else
  * pointer to a string of NULL if it fails
  */
