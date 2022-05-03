@@ -31,7 +31,7 @@ i++;
 j++;
 }
 /* insert s2 into the new string */
-i = 0
+i = 0;
 while (s2[i] != '\0')
 {
 new_str[j] = s2[i];
@@ -52,7 +52,7 @@ int c = 0;
 
 while (*(pointer + c) != '\0')
 {
-c++
+c++;
 }
 return (c);
 }
