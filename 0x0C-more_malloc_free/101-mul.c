@@ -84,10 +84,12 @@ for (l2--; l2 >= 0; l2--)
 s_digit = s2[l2] - '0';
 res += ptr[l2 + l1 + 1] + (f_digit * s_digit);
 ptr[l1 + l2 + 1] = res % 10;
- res /= 10;
+res /= 10;
 }
 if (res)
-ptr[l1 + l2 + 1] = res % 10;}
+ptr[l1 + l2 + 1] = res % 10;
+}
+
 while (*ptr == 0)
 {
 ptr++;
@@ -99,6 +101,7 @@ printf("%i", ptr[i]);
 printf("\n");
 free(temp);
 }
+
 
 /**
  * main - Entry point
