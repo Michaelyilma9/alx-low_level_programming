@@ -1,39 +1,27 @@
-#include "holberton.h"
-
+#include "main.h"
+#include <stdlib.h>
 /**
- * _memset - copy char
- * @s: string
- * @b: input
- * @n: bytes
- * Return: string
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-unsigned int i;
-
-for (i = 0, i < n; i++)
-{
-s[i] = b;
-}
-return (s);
-}
-
-/**
- * _calloc - allocates memory for an array using malloc
- * @nmemb: n elements
- * @size: bytes
- * Return: pointer
+ * _calloc - prints calloc;
+ * @nmemb: input string.
+ * @size: input string.
+ * Return: Pointer.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *p;
+char *p;
+unsigned int i, d;
 
-if (nmemb == 0 || size == 0)
+d = nmemb * size;
+if (nmemb <= 0 || size <= 0)
 return (NULL);
-p = malloc(nmemb * size);
 
+p = malloc(d);
 if (p == NULL)
 return (NULL);
-_memset(p, 0, (nmemb * size));
+
+for (i = 0; i < (d); i++)
+{
+p[i] = 0;
+}
 return (p);
 }
