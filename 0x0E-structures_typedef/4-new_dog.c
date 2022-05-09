@@ -23,7 +23,7 @@ j++;
 doge = malloc(sizeof(dog_t));
 if (doge == NULL)
 {
-free(goge);
+free(doge);
 return (NULL);
 }
 doge->name = malloc(i * sizeof(doge->name));
@@ -34,6 +34,7 @@ free(doge);
 return (NULL);
 }
 for (k = 0; k<= i; k++)
+doge->name[k] = name[k];
 doge->age = age;
 doge->owner = malloc(j * sizeof(doge->owner));
 if (doge->owner == NULL)
