@@ -4,7 +4,7 @@
  * print_numbers - prints numbers, followed by a new line
  * @separator: delimiter
  * @n: n args
- * Retuen: void
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -25,7 +25,7 @@ else
 printf("%d", va_arg(argument1, int));
 }
 }
-printf("%d", ca_arg(argument1, int));
+printf("%d", va_arg(argument1, int));
 va_end(argument1);
 }
 printf("\n");
