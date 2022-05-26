@@ -30,7 +30,7 @@ unsigned long int divisor, check;
 char flag;
 
 flag = 0;
-divisor = __pow(2, sizeof(unsigned long int) * 8 - 1);
+divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
 while (divisor != 0)
 {
 check = n & divisor;
