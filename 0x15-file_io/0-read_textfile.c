@@ -5,7 +5,7 @@
  * @letters: nos of letter
  * Return: the number of letters printed
  */
-ssize_t read_textfiles(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fd;
 int i, y;
